@@ -3,7 +3,6 @@
 </p>
 
 <p align="center">
-
 <div align="center">
 
 <h3>
@@ -41,33 +40,68 @@ Framework ini menggabungkan kekuatan **AI Agent**, **Autonomous Workflows**, dan
 
 ---
 
+# Security Automation Scripts: AI-Driven Defense & Incident Response Framework
+
+[![GitHub last commit](https://img.shields.io/github/last-commit/kongali1720/Security-Automation-Scripts?style=flat-square)](https://github.com/kongali1720/Security-Automation-Scripts)
+[![GitHub repo size](https://img.shields.io/github/repo-size/kongali1720/Security-Automation-Scripts?style=flat-square)](https://github.com/kongali1720/Security-Automation-Scripts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+
+An advanced collection of defensive security engineering artifacts, security automation pipelines, and Artificial Intelligence (AI) security guardrails designed to augment modern Security Operations Centers (SOC) and automate complex Incident Response workflows.
+
+---
+
+## 📁 Repository Architecture
+
+The project maintains a modular structural design to separate configuration layers from core functional intelligence:
+
+```text
+.
+├── .env.example                # Template for secure environment variables
+├── requirements.txt            # Core production dependencies
+├── requirements-dev.txt        # Development, testing, and linting suites
+├── docs/                       # Comprehensive documentation and research papers
+├── tests/                      # Unit testing and validation suites
+└── config/
+    ├── defend.yaml             # Rule definitions for AI security guardrails
+    └── settings.yaml           # Global system and API parameters
+└── python/
+    └── ai/
+        ├── __init__.py
+        ├── ai_soc_assistant.py # Contextual LLM assistant tailored for SOC operations
+        ├── ai_ioc_enricher.py  # Automated threat intelligence ingestion pipeline
+        ├── llm_guardrails.py   # Validation layer against prompt injection/data leakage
+        └── llm_redteam.py      # Automated adversarial resilience evaluation
+```
+
 ## 🎯 Key Capabilities
 
 ### 🤖 AI-Powered Features
 
-| Capability | Description | Technology |
-|------------|-------------|------------|
-| **AI-SOC Assistant** | Intelligent assistant for log triage, incident analysis, and playbook recommendation | Groq API + Qwen-32B |
-| **LLM Security Guardrails** | Protect LLM applications from prompt injection, PII leakage, and harmful content | PyDefend |
-| **LLM Red Teaming** | Penetration testing for LLM systems - detect 40+ vulnerabilities | DeepTeam Framework |
-| **AI IOC Enricher** | Auto-enrich Indicators of Compromise with threat intelligence and AI context | Gemini API + VT |
-| **Autonomous Incident Response** | End-to-end automated response workflow with AI decision making | n8n + AI Agent |
-
-### 🛡️ Traditional Security Features
-
-| Category | Tools | Purpose |
-|----------|-------|---------|
-| **Log Analysis** | Log Analyzer, Log Parser | SIEM-style log parsing and analysis |
-| **Threat Detection** | YARA Scanner, IOC Extractor | Malware detection and threat intelligence |
-| **Integrity Monitoring** | File Integrity Monitor | Baseline hashing and drift detection |
-| **System Hardening** | System Audit, SSH Hardening | CIS benchmark compliance |
-| **Reporting** | Report Generator | Executive HTML/PDF reports |
+| Feature | Description | Technology |
+|----------|-------------|------------|
+| 🤖 **AI-SOC Assistant** | AI-powered assistant for log analysis, incident triage, MITRE ATT&CK mapping, and response recommendations. | Groq API • Qwen-32B |
+| 🛡️ **LLM Security Guardrails** | Protects LLM applications against prompt injection, jailbreak attempts, sensitive data leakage, and unsafe outputs. | PyDefend |
+| 🔴 **LLM Red Teaming** | Automated security assessment framework for evaluating LLM resilience against more than 40 attack scenarios. | DeepTeam Framework |
+| 🔍 **AI IOC Enricher** | Enriches Indicators of Compromise (IOCs) with contextual threat intelligence from multiple external sources. | Gemini API • VirusTotal |
+| ⚡ **Autonomous Incident Response** | AI-driven orchestration that automates investigation, enrichment, containment, and response workflows. | n8n • AI Agent |
 
 ---
 
-```text
-Security-Automation-Scripts/
+### 🛡️ Traditional Security Features
 
+| Category | Components | Purpose |
+|----------|------------|---------|
+| 📊 **Log Analysis** | Log Analyzer, Log Parser | Parse, normalize, and analyze security logs for SOC investigations. |
+| 🎯 **Threat Detection** | YARA Scanner, IOC Extractor | Detect malware, extract IOCs, and support threat intelligence operations. |
+| 🔒 **Integrity Monitoring** | File Integrity Monitor (FIM) | Detect unauthorized file modifications using baseline hashing and integrity checks. |
+| 🔐 **System Hardening** | System Audit, SSH Hardening | Assess and improve system security based on security best practices and CIS benchmarks. |
+| 📄 **Reporting** | Report Generator | Generate comprehensive HTML and PDF security assessment reports. |
+
+---
+
+### Security-Automation-Scripts/
+
+```text
 ├── python/
 │   ├── ai/
 │   │   ├── ai_soc_assistant.py     # 🤖 AI-SOC Assistant
@@ -110,8 +144,9 @@ Security-Automation-Scripts/
 ├── requirements-dev.txt           # 📦 Dev Dependencies
 ├── LICENSE                        # 📜 MIT License
 └── README.md                      # 📖 This File
-````
+```
 
+---
 
 ## 🏗️ Architecture
 
@@ -164,19 +199,6 @@ graph TD
     D3 --> A4
     D4 --> A4
 ```
-# 🤖 AI Security Modules
-
-This project includes AI-powered capabilities designed to enhance Security Operations Center (SOC) workflows, threat hunting, and LLM security assessments.
-
-| Module | Purpose | Technologies |
-|---------|---------|--------------|
-| 🤖 AI SOC Assistant | AI-assisted incident triage and log analysis | Groq • Qwen • OpenAI |
-| 🛡️ LLM Guardrails | Secure LLM interactions and prompt filtering | PyDefend |
-| 🔴 LLM Red Team | Security assessment for LLM applications | DeepTeam |
-| 🔍 AI IOC Enricher | Threat intelligence enrichment | VirusTotal • AbuseIPDB • Gemini |
-| ⚡ n8n Workflows | Automated SOC playbooks | n8n |
-
-> 📚 Detailed documentation for each module is available in the **docs/** directory.
 
 ## 🚀 Quick Start
 
@@ -190,9 +212,10 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-## 💻 Example
+---
 
-### AI SOC Assistant
+## 💻 Example
+## AI SOC Assistant
 
 ```bash
 python python/ai/ai_soc_assistant.py \
@@ -200,7 +223,7 @@ python python/ai/ai_soc_assistant.py \
     --mitre
 ```
 
-### IOC Enrichment
+## IOC Enrichment
 
 ```bash
 python python/ai/ai_ioc_enricher.py \
@@ -208,30 +231,34 @@ python python/ai/ai_ioc_enricher.py \
     --output enriched.json
 ```
 
-### Linux Audit
-
+## Linux Audit
 ```bash
 sudo ./bash/system_audit.sh
 ```
 
-### Windows Audit
-
-```powershell
+## Windows Audit
+```bash
 .\powershell\windows_audit.ps1 -Detailed
 ```
 
+---
+
 ## 🚀 AI Security Roadmap (2026)
 
-| Status | Feature |
-|:------:|---------|
-| ✅ | AI SOC Assistant |
-| ✅ | Security Copilot |
-| ✅ | AI Threat Correlation |
-| 🚧 | MCP Server Security |
-| 🚧 | Autonomous Pentesting |
-| 🚧 | AI Guardrails |
-| ⬜ | Multi-Agent SOC |
-| ⬜ | AI Incident Commander |
+The following roadmap outlines the planned evolution of the AI-powered security ecosystem. Features are prioritized to enhance SOC automation, AI security, and autonomous cyber defense capabilities.
+
+| Status | Initiative | Description |
+|:------:|------------|-------------|
+| ✅ | **AI SOC Assistant** | Intelligent assistant for incident triage, log analysis, and MITRE ATT&CK mapping. |
+| ✅ | **Security Copilot** | AI-powered security assistant for investigation, recommendations, and SOC workflows. |
+| ✅ | **AI Threat Correlation** | Correlate logs, alerts, and threat intelligence using AI-driven contextual analysis. |
+| 🚧 | **MCP Server Security** | Security assessment and hardening toolkit for Model Context Protocol (MCP) servers. |
+| 🚧 | **Autonomous Pentesting** | AI-assisted offensive security workflows for automated security validation. |
+| 🚧 | **Advanced LLM Guardrails** | Enhanced protection against prompt injection, jailbreaks, and sensitive data leakage. |
+| ⬜ | **Multi-Agent SOC** | Collaborative AI agents for autonomous detection, investigation, and response. |
+| ⬜ | **AI Incident Commander** | AI-driven orchestration engine for end-to-end incident response automation. |
+
+---
 
 ```text
 AI-Powered Security Automation
@@ -306,176 +333,87 @@ python python/ai/ai_soc_assistant.py --hunt --timeframe 24h --output threat_repo
 # - Provide actionable recommendations
 ```
 
----
-
----
-
-# 🔐 Security Considerations
+## 🔐 Security Considerations
 
 > [!WARNING]
-> This project is intended **only for defensive security, research, education, and authorized security assessments.**
+> This repository is intended **exclusively for defensive security, cybersecurity research, educational purposes, and authorized security assessments**.
 >
-> Never execute any script against systems or networks without **explicit authorization**.
+> **Never execute any script or security assessment against systems, applications, or networks without explicit authorization from the owner.**
 
 ### Security Best Practices
 
 | Topic | Recommendation |
 |--------|----------------|
-| 🔑 API Keys | Never commit secrets to Git. Store credentials in a `.env` file. |
-| 🔒 Sensitive Data | Execute scripts only in trusted and secured environments. |
-| 🤖 AI Models | Ensure compliance with applicable privacy and data protection regulations when using cloud-based AI services. |
-| 🔴 Red Teaming | Perform LLM security assessments only on systems you own or are authorized to test. |
-| 📄 Log Files | Logs may contain Personally Identifiable Information (PII). Always sanitize sensitive data before sharing. |
-| 📦 Dependencies | Keep Python packages and third-party tools up to date to reduce security risks. |
+| 🔑 **API Keys & Secrets** | Never commit credentials or API keys to Git. Store sensitive configuration securely using a `.env` file or a secrets manager. |
+| 🔒 **Sensitive Data** | Execute security tools only within trusted, isolated, and properly secured environments. |
+| 🤖 **AI Models** | Ensure compliance with privacy regulations and organizational policies when using cloud-based AI services. |
+| 🔴 **Red Teaming** | Perform LLM security assessments only against systems you own or are explicitly authorized to test. |
+| 📄 **Log Files** | Security logs may contain Personally Identifiable Information (PII). Always sanitize sensitive information before sharing or publishing. |
+| 📦 **Dependencies** | Regularly update Python packages, system dependencies, and third-party tools to mitigate known vulnerabilities. |
 
 ---
 
-# 📄 License
+## 🎯 Technical Focus
 
-This project is distributed under the **MIT License**.
-
-See the **LICENSE** file for additional information.
-
----
-
-# 👨‍💻 Author
-
-<div align="center">
-
-## Kong Ali
-
-**Cybersecurity Enthusiast • Blue Team • Security Automation • AI Security**
-
-[![GitHub](https://img.shields.io/badge/GitHub-@kongali1720-181717?style=for-the-badge&logo=github)](https://github.com/kongali1720)
-
-</div>
-
-### 🎯 Focus Areas
+This project focuses on building practical, AI-assisted cybersecurity solutions for modern Security Operations Centers (SOC), incident response, and defensive security engineering.
 
 | Domain | Specialization |
-|---------|----------------|
-| 🔵 Blue Team Engineering | Detection Engineering, SOC Operations |
-| 🔴 Incident Response | Digital Investigation & Containment |
-| 🛡️ Security Automation | Python, Bash & PowerShell |
-| 🤖 AI Security | LLM Security, AI Guardrails & AI SOC |
-| 🔍 Threat Hunting | IOC Correlation & Detection |
-| 📊 Security Operations Center | SIEM, Detection & Monitoring |
-| 🌐 Web3 Security | Smart Contract & Blockchain Security |
+|--------|----------------|
+| 🔵 **Blue Team Engineering** | Detection Engineering, SOC Operations, Detection Rules |
+| 🔴 **Incident Response** | Digital Forensics, Incident Triage, Automated Containment |
+| 🛡️ **Security Automation** | Cross-platform Automation using Python, Bash, and PowerShell |
+| 🤖 **AI Security** | LLM Security, Prompt Injection Defense, AI Guardrails, AI SOC |
+| 🔍 **Threat Hunting** | IOC Correlation, Threat Intelligence, Behavioral Analysis |
+| 📊 **Security Operations Center (SOC)** | SIEM Optimization, Log Correlation, Threat Monitoring |
+| 🌐 **Web3 Security** | Smart Contract Security, Blockchain Forensics, Wallet Investigation |
 
 ---
 
-# 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
-Special thanks to the following projects and communities:
+This project is built upon the incredible work of the open-source cybersecurity and AI communities.
 
-- 🚀 **Groq** — High-performance LLM inference
-- 🤖 **OpenAI** — AI capabilities and language models
-- 💎 **Google Gemini** — AI-assisted threat intelligence
-- 🎨 **Streamlit** — Interactive web applications
-- ⚡ **n8n** — Workflow automation platform
-- 🛡️ **YARA** — Malware pattern matching
-- 🌍 **VirusTotal** — Threat intelligence platform
-- 🚨 **AbuseIPDB** — IP reputation services
-- ❤️ **Open Source Community** — Continuous inspiration and collaboration
+### 🤖 AI & Inference
+
+- 🚀 Groq
+- 🤖 OpenAI
+- 💎 Google Gemini
+
+### ⚙️ Automation & Orchestration
+
+- 🎨 Streamlit
+- ⚡ n8n
+- 🐙 GitHub Actions
+
+### 🛡️ Threat Intelligence & Detection
+
+- 🌍 VirusTotal
+- 🚨 AbuseIPDB
+- 🛡️ YARA
+- 📐 Sigma Rules
+- 🎯 MITRE ATT&CK
+
+### ❤️ Open Source Community
+
+Special thanks to all researchers, maintainers, contributors, and the global open-source cybersecurity community whose work continues to inspire and advance defensive security.
+
 
 ---
-
-# 📊 Repository Statistics
-
 <div align="center">
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kongali1720.Security-Automation-Scripts)
+## ☕ Support the Project
 
-![GitHub last commit](https://img.shields.io/github/last-commit/kongali1720/Security-Automation-Scripts?style=for-the-badge)
-
-![GitHub repo size](https://img.shields.io/github/repo-size/kongali1720/Security-Automation-Scripts?style=for-the-badge)
-
-![GitHub stars](https://img.shields.io/github/stars/kongali1720/Security-Automation-Scripts?style=for-the-badge)
-
-![GitHub forks](https://img.shields.io/github/forks/kongali1720/Security-Automation-Scripts?style=for-the-badge)
-
-</div>
-
----
-
-# ❤️ Support the Project
-
-If this project helps you, please consider supporting its development.
+If this project has helped your research, learning, or security operations, consider supporting its continued development.
 
 <div align="center">
-
-### ⭐ Star this Repository
-
-If you find this project useful, please leave a **Star** to support future development.
-
-<a href="https://github.com/kongali1720/Security-Automation-Scripts">
-<img src="https://img.shields.io/badge/⭐%20Star%20Repository-181717?style=for-the-badge&logo=github">
-</a>
-
-<br><br>
-
-### ☕ Buy Me a Coffee
 
 <a href="https://www.paypal.com/paypalme/bungtempong99">
-<img src="https://img.shields.io/badge/☕-Support%20Development-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000">
+<img src="https://img.shields.io/badge/☕-Support_Development-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000">
 </a>
 
 </div>
 
 ---
-
-# 📁 Project Structure
-
-The following supporting files are recommended:
-
-```text
-.env.example
-requirements.txt
-requirements-dev.txt
-
-docs/
-
-tests/
-
-config/
-├── defend.yaml
-└── settings.yaml
-
-python/
-└── ai/
-    ├── __init__.py
-    ├── ai_soc_assistant.py
-    ├── ai_ioc_enricher.py
-    ├── llm_guardrails.py
-    └── llm_redteam.py
-```
-
----
-
-# 🚀 Future Enhancements
-
-- 🎥 Interactive GIF demonstrations
-- 📺 Video tutorials
-- 📊 Streamlit Dashboard
-- 🛡️ AI Security Dashboard
-- 📈 Real-time Threat Intelligence
-- 🤖 Multi-Agent Security Operations
-- ⚡ AI Copilot for SOC Analysts
-- 🌐 Web-based Management Console
-- ☁️ Docker & Kubernetes Deployment
-- 🔄 GitHub Actions CI/CD Pipeline
-
----
-
-<div align="center">
-
-## 🛡️ Secure • Detect • Automate • Respond
-
-**Built with ❤️ for the Open Source Cybersecurity Community**
-
-**⭐ Star • 🍴 Fork • 🤝 Contribute • 🚀 Secure Together**
-
-</div>
 
 
 
