@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use these security automation artifacts or frameworks in your academic research, please cite it as below."
+authors:
+- family-names: "Ali"
+  given-names: "Kong"
+title: "Security Automation Scripts: AI-Driven Defense and Incident Response Framework"
+version: 1.0.0
+date-released: 2026-07-03
+url: "https://github.com/kongali1720/Security-Automation-Scripts"
